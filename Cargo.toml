@@ -1,0 +1,10 @@
+[package]
+name = "ezcrash"
+version = "0.1.0"
+edition = "2021"
+authors = ["unknowntrojan"]
+
+[dependencies]
+windows = { version = "0.58.0", features = ["Win32_Foundation", "Win32_System_Kernel", "Win32_System_Diagnostics_Debug", "Win32_UI_WindowsAndMessaging"] }
+log = "0.4.22"
+strum = { version = "0.26.3", features = ["derive"] }
