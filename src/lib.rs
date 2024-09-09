@@ -136,12 +136,18 @@ unsafe extern "system" fn handler(ptrs: *mut EXCEPTION_POINTERS) -> i32 {
     EXCEPTION_CONTINUE_SEARCH
 }
 
+/// The settings for your ezcrash handler.
 #[derive(Clone)]
 pub struct EzCrashConfiguration {
+    /// Should a message box be shown?
     pub output_messagebox: bool,
+    /// Should a log error be emitted?
     pub output_log: bool,
+    /// Should the crash message be output to a file, and if so, where?
     pub output_file: Option<String>,
+    /// Should a stack trace be included?
     pub include_stack_trace: bool,
+    /// Should the thread context be included?
     pub include_thread_context: bool,
 }
 
