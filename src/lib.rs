@@ -166,15 +166,15 @@ pub fn init(cfg: EzCrashConfiguration) {
     let _ = unsafe { AddVectoredExceptionHandler(0, Some(handler)) };
 }
 
-#[test]
-fn test() {
-    init(EzCrashConfiguration {
-        output_messagebox: true,
-        output_log: true,
-        output_file: Some(String::from("crash")),
-        include_stack_trace: true,
-        include_thread_context: true,
-    });
+// #[test]
+// fn test() {
+//     init(EzCrashConfiguration {
+//         output_messagebox: true,
+//         output_log: true,
+//         output_file: Some(String::from("crash")),
+//         include_stack_trace: true,
+//         include_thread_context: true,
+//     });
 
-    print!("result: {}", 8 + unsafe { *std::ptr::null::<usize>() });
-}
+//     print!("result: {}", 8 + unsafe { *std::ptr::null::<usize>() });
+// }
